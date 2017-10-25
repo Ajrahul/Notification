@@ -1,0 +1,59 @@
+<div class="row">
+  <div id="mobile" class=" col-md-12 col-sm-12 col-xs-12 no-padding">
+    <nav role="navigation " id="slide-nav" class="navbar hidden-md hidden-lg">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li class="date-info">{{currentDate}}</li>
+          <li class="notify-info"><h2> {{notificationCount.assignedTask}}</h2><h5> Assigned Tasks </h5></li>
+          <li class="notify-info"><h2>{{notificationCount.reminder}}</h2><h5> Reminders</h5></li>
+          <li class="notify-info"><h2>{{notificationCount.notification}}</h2> <h5>Notifications</h5></li>
+          <li>
+            <alert *ngFor="let message of messages" type="info" dismissible="true" class="alert-box">
+              <p><b>{{getTime(message.time)}}</b></p><br>
+              <p>{{ message.text.msg }} <a ><b (click)="goto(message.text.id)">
+                {{viewText(message.text.type)}}</b></a></p>
+            </alert>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div id="desktop" class="main-container col-md-12 col-lg-12 hidden-sm hidden-xs">
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">{{currentDate}}
+        </div>
+      </div>
+    </nav>
+
+  <div class="row">
+    <div class="col-md-4 col-lg-4 message-box">
+      <div class="message-count"><h2>{{notificationCount.assignedTask}}</h2></div>
+      <div class="message-title">Assigned Tasks</div>
+    </div>
+    <div class="col-md-4 col-lg-4 message-box">
+      <div class="message-count"><h2>{{notificationCount.reminder}}</h2></div>
+      <div class="message-title">Reminders</div>
+    </div>
+    <div class="col-md-4 col-lg-4 message-box">
+      <div class="message-count"><h2>{{notificationCount.notification}}</h2></div>
+      <div class="message-title">Notifications</div>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-2-offset col-lg-7 col-md-7 " *ngFor="let message of messages">
+      <alert type="info" dismissible="true">
+        <p><b>{{getTime(message.time)}}</b></p>
+        <p>{{ message.text.msg }} <a ><b (click)="goto(message.text.id)">{{viewText(message.text.type)}}</b></a></p>
+      </alert>
+    </div>
+  </div>
+
+</div>

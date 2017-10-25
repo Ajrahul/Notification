@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+.alert {
+  margin-bottom: 0;
+  border: none;
+  border-radius:0;
+}
+.alert-info {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+  border-top: 1px solid rgba(150, 149, 149, 0.822);
+}
