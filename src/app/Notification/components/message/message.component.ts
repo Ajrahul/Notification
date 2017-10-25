@@ -12,31 +12,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class MessageComponent implements OnInit, OnDestroy {
   message: any;
   msgId: number = 0;
-  json = [{
-    type: 1,
-    id: 1,
-    msg: 'Oliver1 Quiver has assigned the interview- Book travel type to you'
-  }, {
-    type: 2,
-    id: 2,
-    msg: 'Oliver2 Quiver has assigned the interview- Book travel type to you'
-  }, {
-    type: 3,
-    id: 3,
-    msg: 'Oliver3 Quiver has assigned the interview- Book travel type to you'
-  }, {
-    type: 1,
-    id: 4,
-    msg: 'Oliver4 Quiver has assigned the interview- Book travel type to you'
-  }, {
-    type: 2,
-    id: 5,
-    msg: 'Oliver5 Quiver has assigned the interview- Book travel type to you'
-  }, {
-    type: 3,
-    id: 6,
-    msg: 'Oliver6 Quiver has assigned the interview- Book travel type to you'
-  }];
+
   constructor(
     private notificationService: NotificationService,
     private _activatedRoute: ActivatedRoute,
@@ -62,7 +38,6 @@ export class MessageComponent implements OnInit, OnDestroy {
     this._router.navigate([`Notification`]);
   }
 
-
   ngOnDestroy() {
   }
 
@@ -70,6 +45,30 @@ export class MessageComponent implements OnInit, OnDestroy {
   // 1 depict assigned type
   // 2 depict reminder
   // 3 depict notification
-
+  json = [{
+    type: 1,
+    id: 1,
+    msg: 'Oliver1 Quiver has assigned the interview- Book travel type to you'
+  }, {
+    type: 2,
+    id: 2,
+    msg: 'Oliver2 Quiver has assigned the interview- Book travel type to you'
+  }, {
+    type: 3,
+    id: 3,
+    msg: 'Oliver3 Quiver has assigned the interview- Book travel type to you'
+  }, {
+    type: 1,
+    id: 4,
+    msg: 'Oliver4 Quiver has assigned the interview- Book travel type to you'
+  }, {
+    type: 2,
+    id: 5,
+    msg: 'Oliver5 Quiver has assigned the interview- Book travel type to you'
+  }, {
+    type: 3,
+    id: 6,
+    msg: 'Oliver6 Quiver has assigned the interview- Book travel type to you'
+  }];
 
 }

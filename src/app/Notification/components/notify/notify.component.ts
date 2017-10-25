@@ -53,6 +53,7 @@ export class NotifyComponent implements OnInit, OnDestroy {
   getTime(time) {
     return moment(time, 'DD-MM-YYYY hh:mm:ss a').fromNow();
   }
+
   getNotification() {
     this.connection = this.notificationService.getMessages().subscribe((res) => {
       let data: any = res;

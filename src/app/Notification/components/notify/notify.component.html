@@ -1,6 +1,6 @@
 <div class="row">
-  <div id="mobile" class=" col-md-12 col-sm-12 col-xs-12 no-padding">
-    <nav role="navigation " id="slide-nav" class="navbar hidden-md hidden-lg">
+  <div id="mobile" class="col-md-12 col-sm-12 col-xs-12 no-padding">
+    <nav role="navigation" id="slide-nav" class="navbar hidden-md hidden-lg">
       <div id="menuToggle">
         <input type="checkbox" />
         <span></span>
@@ -47,8 +47,8 @@
     </div>
   </div>
 
-  <div class="row ">
-    <div class="col-2-offset col-lg-7 col-md-7 " *ngFor="let message of messages">
+  <div class="row">
+    <div class="col-2-offset col-lg-7 col-md-7" *ngFor="let message of messages">
       <alert type="info" dismissible="true">
         <p><b>{{getTime(message.time)}}</b></p>
         <p>{{ message.text.msg }} <a ><b (click)="goto(message.text.id)">{{viewText(message.text.type)}}</b></a></p>
